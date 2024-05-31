@@ -6,19 +6,13 @@ import { Card } from "../entities/Card";
 import { Button } from "../shared/ui/Button";
 import { Review } from "../entities/Review";
 import { CatalogBrowse } from "../widgets/CatalogBrowse";
-
+import { data } from "../reviews";
+import { ReviewList } from "../widgets/ReviewList";
 function App() {
   return (
-    <div>
-      <Header />
-      <Main />
-      <Brands />
-      <Card a={true} />
-      <Review />
-
-      <CatalogBrowse />
-      <Footer />
-    </div>
+    <>
+      <ReviewList />
+    </>
   );
 }
 

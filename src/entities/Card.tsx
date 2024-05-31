@@ -1,7 +1,18 @@
 import { Star } from "../shared/Star";
 import { PriceWithDiscount } from "../shared/ui/PriceWIthDiscount";
 
-export const Card = ({ a }) => {
+interface CardProps {
+  rating: number;
+  isDiscount: boolean;
+  priceWithDiscount: number;
+  priceWithoutDiscount: number;
+}
+export const Card = ({
+  rating,
+  isDiscount,
+  priceWithDiscount,
+  priceWithoutDiscount,
+}: CardProps) => {
   return (
     <div className=" w-min">
       <div className="w-[300px] h-[300px] bg-[#F0EEED] flex justify-center rounded-2xl">
@@ -19,12 +30,18 @@ export const Card = ({ a }) => {
       opacity-60 flex flex-row gap-2 text-lg my-auto
       "
       >
-        {Array(4).fill(<Star />)} 4.5/5
+        {Array(Math.ceil(rating)).fill(<Star />)} {rating}/5
       </p>
-      {a ? (
-        <PriceWithDiscount />
+      {isDiscount ? (
+        <PriceWithDiscount
+          priceWithDiscount={priceWithDiscount}
+          priceWithoutDiscount={priceWithoutDiscount}
+          discount={((priceWithDiscount / priceWithoutDiscount) * 100).toFixed(
+            1
+          )}
+        />
       ) : (
-        <p className="mt-[8px] text-xl font-bold">$120</p>
+        <p className="mt-[8px] text-xl font-bold">{priceWithoutDiscount}</p>
       )}
     </div>
   );
