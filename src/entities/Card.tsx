@@ -14,8 +14,8 @@ export const Card = ({
   priceWithoutDiscount,
 }: CardProps) => {
   return (
-    <div className="mx-auto w-min text-left duration-500 cursor-pointer hover:brightness-75">
-      <div className="w-[300px] h-[300px] bg-[#F0EEED] flex justify-center rounded-2xl">
+    <div className="mx-auto w-[350px] text-left duration-500 cursor-pointer hover:brightness-75">
+      <div className="bg-[#F0EEED] h-[320px]  flex justify-center rounded-2xl">
         <img
           className="w-[240px] h-[200px] m-auto"
           src="https://cdn.jolybell.com/images/nWfZjCItxcSRSd5.png"

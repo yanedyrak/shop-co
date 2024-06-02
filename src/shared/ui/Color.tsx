@@ -12,7 +12,7 @@ export const Color = ({
   return (
     <div
       onClick={f}
-      className={` inline-block w-[50px] h-[50px] duration-300 rounded-full border-[1px] hover:brightness-75 cursor-pointer`}
+      className={`mx-auto my-[5px] w-[50px] h-[50px] duration-300 rounded-full border-[1px] hover:brightness-75 cursor-pointer`}
       style={{ backgroundColor: `${color}` }}
     >
       {isActive ? (

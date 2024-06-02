@@ -8,17 +8,17 @@ export const Header = () => {
       <Link to="/">
         <h1 className="font-bold text-[40px]">SHOP.CO</h1>
       </Link>
-      <div className="flex gap-6 ">
-        <Link to="/catalog" className="font-light my-[auto] text-[16px]">
+      <div className="flex gap-6">
+        <Link to="/catalog" className="font-light my-[auto] text-xl">
           Shop
         </Link>
-        <Link to="/catalog" className="font-light my-[auto] text-[16px]">
+        <Link to="/catalog" className="font-light my-[auto] text-xl">
           On sale
         </Link>
-        <Link to="/catalog" className="font-light my-[auto] text-[16px]">
+        <Link to="/catalog" className="font-light my-[auto] text-xl">
           New Arrivals
         </Link>
-        <Link to="/catalog" className="font-light my-[auto] text-[16px]">
+        <Link to="/catalog" className="font-light my-[auto] text-xl">
           Brands
         </Link>
       </div>
