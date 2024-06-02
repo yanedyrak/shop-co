@@ -1,15 +1,26 @@
 import { CartSVG } from "../shared/ui/header/CartSVG";
 import { UserSVG } from "../shared/ui/header/UserSVG";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
     <nav className="px-[100px] py-[30px] text-black flex justify-between align-middle">
-      <h1 className="font-bold text-[40px]">SHOP.CO</h1>
+      <Link to="/">
+        <h1 className="font-bold text-[40px]">SHOP.CO</h1>
+      </Link>
       <div className="flex gap-6 ">
-        <a className="font-light my-[auto] text-[16px]">Shop</a>
-        <a className="font-light my-[auto] text-[16px]">On sale</a>
-        <a className="font-light my-[auto] text-[16px]">New Arrivals</a>
-        <a className="font-light my-[auto] text-[16px]">Brands</a>
+        <Link to="/catalog" className="font-light my-[auto] text-[16px]">
+          Shop
+        </Link>
+        <Link to="/catalog" className="font-light my-[auto] text-[16px]">
+          On sale
+        </Link>
+        <Link to="/catalog" className="font-light my-[auto] text-[16px]">
+          New Arrivals
+        </Link>
+        <Link to="/catalog" className="font-light my-[auto] text-[16px]">
+          Brands
+        </Link>
       </div>
       <input
         className="text-xl pl-[2%] pr-[15%] pt-[12px] pb-[14px] bg-[#f0f0f0] rounded-[62px]"

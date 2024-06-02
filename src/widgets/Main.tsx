@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { BlackElement } from "../shared/ui/main/BlackElement";
 
 export const Main = () => {
@@ -19,9 +20,11 @@ export const Main = () => {
           style.
         </p>
 
-        <button className="px-[54px] mt-[32px] text-white rounded-[62px] bg-black py-[16px]">
-          Shop now
-        </button>
+        <Link to="/catalog">
+          <button className="px-[54px] mt-[32px] text-white rounded-[62px] duration-300 bg-black py-[16px] hover:bg-white hover:text-black">
+            Shop now
+          </button>
+        </Link>
         <div className="mt-[45px] pb-[116px] flex justify-between">
           <div>
             <h2 className="text-[40px] font-bold">200+</h2>

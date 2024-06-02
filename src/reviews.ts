@@ -10,7 +10,7 @@ export const data: ReviewProps[] = [
   {
     id: 2,
     rating: 4,
-    userName: "Jane Doe",
+    userName: "Johan Liebert",
     text: "lorem",
   },
   {
@@ -22,7 +22,7 @@ export const data: ReviewProps[] = [
   {
     id: 4,
     rating: 2,
-    userName: "Jane Doe",
+    userName: "Ilya Kupriets",
     text: "lorem",
   },
   {

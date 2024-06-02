@@ -14,7 +14,7 @@ export const Card = ({
   priceWithoutDiscount,
 }: CardProps) => {
   return (
-    <div className=" w-min">
+    <div className="mx-auto w-min text-left duration-500 cursor-pointer hover:brightness-75">
       <div className="w-[300px] h-[300px] bg-[#F0EEED] flex justify-center rounded-2xl">
         <img
           className="w-[240px] h-[200px] m-auto"
@@ -41,7 +41,7 @@ export const Card = ({
           )}
         />
       ) : (
-        <p className="mt-[8px] text-xl font-bold">{priceWithoutDiscount}</p>
+        <p className="text-xl font-bold">${priceWithoutDiscount}</p>
       )}
     </div>
   );
