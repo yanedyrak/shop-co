@@ -1,9 +1,3 @@
-import { Link } from "react-router-dom";
-import firstImg from "../shared/ui/browseCatalog/firstImg.png";
-import secondImg from "../shared/ui/browseCatalog/secondImg.png";
-import thirdImg from "../shared/ui/browseCatalog/thirdImg.png";
-import fourthImg from "../shared/ui/browseCatalog/fourthImg.png";
-
 export const CatalogBrowse = () => {
   return (
     <div className="bg-[#f0f0f0] px-[100px] text-center ">
