@@ -1,7 +1,5 @@
 import { MenuProps } from "antd";
 
-import { Color } from "./Color";
-
 type MenuItem = Required<MenuProps>["items"][number];
 
 export const items: MenuItem[] = [
