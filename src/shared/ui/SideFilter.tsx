@@ -47,7 +47,7 @@ export const SideFilter: React.FC = () => {
           range={true}
           defaultValue={[20, 130]}
         />
-        <div className="text-black text-center text-2xl">
+        <div className="text-black text-center text-4xl">
           {`$${sliderValue[0]} - $${sliderValue[1]}`}
         </div>
         <div className="pt-[20px] flex gap-7 justify-center">

@@ -8,12 +8,10 @@ export const Size = ({
   return (
     <button
       className={`my-3 rounded-[62px] text-2xl duration-300 overflow-hidden flex ${
-        isActive ? " bg-[#000] " : " bg-[#ffffff] "
-      } ${isActive ? " text-white " : " text-black "} hover:${
-        isActive ? "bg-[#fff]" : "bg-[#d0d0d0]"
-      }`}
+        isActive ? "bg-[#000] text-white" : "bg-[#fff] text-black"
+      } `}
     >
-      <p className="px-[24px] py-[12px] opacity-60">{children}</p>
+      <p className="px-[24px] py-[12px]">{children}</p>
     </button>
   );
 };
