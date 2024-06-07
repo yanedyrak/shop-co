@@ -5,8 +5,8 @@ export default {
   theme: {
     screens: {
       "2xl": { max: "1815px" },
-      xl: { max: "1279px" },
-      lg: { max: "1023px" },
+      xl: { max: "1579px" },
+      lg: { max: "1223px" },
       md: { max: "767px" },
       sm: { max: "639px" },
       xs: { max: "479px" },

@@ -1,4 +1,5 @@
 import { Card } from "../entities/Card";
+import { CardCarousel } from "./CardCarousel";
 const data = [
   {
     id: 1,
@@ -33,10 +34,13 @@ export const CardList = ({ children }: { children?: React.ReactNode }) => {
   return (
     <div className="block  align-middle text-center">
       <h1 className="my-20 bold text-5xl">{children}</h1>
-      <div className="grid grid-cols-4 gap-[20px]">
+      <div className="grid grid-cols-4 gap-[20px] lg:hidden">
         {data.map((card) => (
           <Card key={card.id} {...card} />
         ))}
+      </div>
+      <div className="hidden lg:block ">
+        <CardCarousel />
       </div>
     </div>
   );

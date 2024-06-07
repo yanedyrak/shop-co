@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Drawer, Space } from "antd";
 import { SearchIcon } from "./SearchIcon";
 import { SideFilter } from "./SideFilter";
@@ -6,7 +5,7 @@ import { useAppDispatch } from "../hooks/useAppDispatch";
 import { useAppSelector } from "../hooks/useAppSelector";
 import { closeDrawer, openDrawer } from "../store/PhoneDrawer";
 
-const PhoneFilter: React.FC = () => {
+const PhoneFilter = () => {
   const dispatch = useAppDispatch();
   const opened = useAppSelector((state) => state.PhoneDrawer.open);
   return (

@@ -1,4 +1,10 @@
-export const CartSVG = ({ width, height }: Record<string, number>) => {
+export const CartSVG = ({
+  width,
+  height,
+}: {
+  width: number;
+  height: number;
+}) => {
   return (
     <svg
       width={width}

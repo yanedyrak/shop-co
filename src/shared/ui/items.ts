@@ -8,24 +8,24 @@ export const items: MenuItem[] = [
     label: "Filter",
     children: [
       {
-        key: "sub1",
+        key: "t-shirt",
         label: "T-shirt",
       },
 
       {
-        key: "sub2",
+        key: "shorts",
         label: "Shorts",
       },
       {
-        key: "sub3",
+        key: "shirts",
         label: "Shirts",
       },
       {
-        key: "sub4",
-        label: "Hoodie",
+        key: "hoodie",
+        label: "Hoodies",
       },
       {
-        key: "sub5",
+        key: "jeans",
         label: "Jeans",
       },
     ],

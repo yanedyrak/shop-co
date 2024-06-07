@@ -1,11 +1,14 @@
 import React from "react";
 import { ConfigProvider, Menu, Slider } from "antd";
-
 import { items } from "./items";
 import { ColorsDrop } from "./ColorsDrop";
 import { SizesDrop } from "./SizesDrop";
+import { useAppSelector } from "../hooks/useAppSelector";
+import { useAppDispatch } from "../hooks/useAppDispatch";
+import { resetFilter, setCategory, setPrice } from "../store/CatalogFIlter";
 export const SideFilter: React.FC = () => {
-  const [sliderValue, setSliderValue] = React.useState([20, 130]);
+  const dispatch = useAppDispatch();
+  const sliderValue = useAppSelector((state) => state.CatalogFilter.price);
   return (
     <ConfigProvider
       theme={{
@@ -16,7 +19,7 @@ export const SideFilter: React.FC = () => {
           },
           Menu: {
             fontSize: 20,
-            itemSelectedBg: "#c0c0c0",
+            itemSelectedBg: "#f9f9f9",
             itemActiveBg: "#000",
             colorPrimary: "#000",
             colorText: "#000",
@@ -38,11 +41,17 @@ export const SideFilter: React.FC = () => {
         },
       }}
     >
-      <div className="flex flex-col text-2xl w-[500px]">
-        <Menu defaultOpenKeys={["sub1"]} mode="inline" items={items} />
+      <div className="flex flex-col text-2xl w-min">
+        <Menu
+          defaultOpenKeys={["sub1"]}
+          mode="inline"
+          onSelect={({ key }) => dispatch(setCategory(key))}
+          onDeselect={() => dispatch(setCategory(""))}
+          items={items}
+        />
         <Slider
           className="text-black"
-          onChange={(value) => setSliderValue(value)}
+          onChange={(value) => dispatch(setPrice(value))}
           max={200}
           range={true}
           defaultValue={[20, 130]}
@@ -54,7 +63,10 @@ export const SideFilter: React.FC = () => {
           <ColorsDrop />
           <SizesDrop />
         </div>
-        <button className="py-[12px]  my-[20px] w-[200px] self-center rounded-[62px] duration-300 bg-black text-white text-[18px] hover:bg-[#f0f0f0] hover:text-black">
+        <button
+          onClick={() => dispatch(resetFilter())}
+          className="py-[12px]  my-[20px] w-[200px] self-center rounded-[62px] duration-300 bg-black text-white text-[18px] hover:bg-[#f0f0f0] hover:text-black"
+        >
           Apply Filter
         </button>
       </div>

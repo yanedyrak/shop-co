@@ -7,15 +7,15 @@ import { Size } from "./Size";
 
 const items: MenuProps["items"] = [
   {
-    label: <Size isActive={true}>Medium</Size>,
+    label: <Size>Medium</Size>,
     key: "0",
   },
   {
-    label: <Size isActive={false}>Large</Size>,
+    label: <Size>Large</Size>,
     key: "1",
   },
   {
-    label: <Size isActive={false}>Extra Large</Size>,
+    label: <Size>Extra Large</Size>,
     key: "2",
   },
 ];
