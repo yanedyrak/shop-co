@@ -10,9 +10,6 @@ const CatalogFilter = createSlice({
   name: "CatalogFilter",
   initialState,
   reducers: {
-    resetFilter(state) {
-      state = initialState;
-    },
     setCategory(state, action: PayloadAction<string>) {
       state.category = action.payload;
     },
@@ -21,6 +18,12 @@ const CatalogFilter = createSlice({
     },
     setColor(state, action: PayloadAction<string>) {
       state.color = action.payload;
+    },
+    resetFilter(state) {
+      state.category = "";
+      state.price = [20, 130];
+      state.color = "";
+      state.size = "";
     },
     setSize(state, action: PayloadAction<string>) {
       state.size = action.payload;
