@@ -34,12 +34,12 @@ export const CardList = ({ children }: { children?: React.ReactNode }) => {
   return (
     <div className="block  align-middle text-center">
       <h1 className="my-20 bold text-5xl">{children}</h1>
-      <div className="grid grid-cols-4 gap-[20px] lg:hidden">
+      <div className="grid grid-cols-4 gap-[20px] xl:hidden">
         {data.map((card) => (
           <Card key={card.id} {...card} />
         ))}
       </div>
-      <div className="hidden lg:block ">
+      <div className="hidden xl:block ">
         <CardCarousel />
       </div>
     </div>

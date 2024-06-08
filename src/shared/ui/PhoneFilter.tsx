@@ -1,17 +1,16 @@
 import { Drawer, Space } from "antd";
-import { SearchIcon } from "./SearchIcon";
+import { FilterSVG } from "./FilterSVG";
 import { SideFilter } from "./SideFilter";
 import { useAppDispatch } from "../hooks/useAppDispatch";
 import { useAppSelector } from "../hooks/useAppSelector";
 import { closeDrawer, openDrawer } from "../store/PhoneDrawer";
-
 const PhoneFilter = () => {
   const dispatch = useAppDispatch();
   const opened = useAppSelector((state) => state.PhoneDrawer.open);
   return (
     <>
       <Space>
-        <SearchIcon onClick={() => dispatch(openDrawer())} />
+        <FilterSVG onClick={() => dispatch(openDrawer())} />
       </Space>
       <Drawer
         placement={"bottom"}

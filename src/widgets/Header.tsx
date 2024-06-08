@@ -14,7 +14,7 @@ export const Header = () => {
         <MenuOutlined className="text-[25px]" />
       </button>
       <Link to="/">
-        <h1 className="font-bold text-[40px] sm: text-[25px]">SHOP.CO</h1>
+        <h1 className="font-bold text-[40px] sm:text-[20px]">SHOP.CO</h1>
       </Link>
       <div className="flex gap-6 lg:hidden">
         <Link to="/catalog" className="font-light my-[auto] text-xl">

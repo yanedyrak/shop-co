@@ -3,19 +3,22 @@ import { PaymentsFooter } from "../shared/ui/footer/PaymentsFooter";
 
 export const Footer = () => {
   return (
-    <div className="pt-[140px] pb-[82px] px-[100px] bg-[#f0f0f0]">
-      <div className="flex justify-between mb-[40px]">
-        <div className="w-72">
+    <div className="pt-[140px] pb-[82px] px-[100px] bg-[#f0f0f0] sm:pt-[20px] sm:px-[10px]">
+      <div className="flex justify-between mb-[40px] sm:flex-col gap-6 sm:justify-center sm:align-middle sm:text-center">
+        <div className="w-72 sm:mx-auto">
           <Link to="/" className="duration-300 opacity-100 hover:opacity-100">
             <h1 className="font-bold text-[32px]">SHOP.CO</h1>
           </Link>
-          <p className="font-light text-[14px] mt-[25px] opacity-6">
+          <p className="font-light text-[14px] mt-[25px] pb-[20px] opacity-6">
             We have clothes that suits your style and which you are proud to
             wear. From women to men.
           </p>
         </div>
         <div className="flex flex-col gap-2">
-          <Link to="/" className="tracking-widest text-[16px]">
+          <Link
+            to="/"
+            className="tracking-widest text-[16px] sm:text-[22px] font-bold"
+          >
             COMPANY
           </Link>
           <Link
@@ -44,7 +47,10 @@ export const Footer = () => {
           </Link>
         </div>
         <div className="flex flex-col gap-2">
-          <Link to="/" className="tracking-widest text-[16px]">
+          <Link
+            to="/"
+            className="tracking-widest text-[16px] sm:text-[22px] font-bold"
+          >
             HELP
           </Link>
           <Link
@@ -73,7 +79,10 @@ export const Footer = () => {
           </Link>
         </div>
         <div className="flex flex-col gap-2">
-          <Link to="/" className="tracking-widest text-[16px]">
+          <Link
+            to="/"
+            className="tracking-widest text-[16px] sm:text-[22px] font-bold"
+          >
             FAQ
           </Link>
           <Link
@@ -102,7 +111,10 @@ export const Footer = () => {
           </Link>
         </div>
         <div className="flex flex-col gap-2">
-          <Link to="/" className="tracking-widest text-[16px]">
+          <Link
+            to="/"
+            className="tracking-widest text-[16px] sm:text-[22px] font-bold"
+          >
             RESOURCES
           </Link>
           <Link
